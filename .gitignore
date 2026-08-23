@@ -1,0 +1,55 @@
+# =============================================================================
+# .gitignore for RNA-seq Analysis Project
+# =============================================================================
+
+# --- Raw data (large files, download separately) -----------------------------
+data/raw/*.fastq.gz
+data/raw/*.fq.gz
+data/raw/*.sra
+
+# --- Reference genome files (large, download separately) ---------------------
+data/raw/*.fa
+data/raw/*.fa.gz
+data/raw/*.gtf
+data/raw/*.gtf.gz
+
+# --- Aligned BAM files (large) -----------------------------------------------
+data/processed/aligned/*.bam
+data/processed/aligned/*.bam.bai
+data/processed/aligned/*.tmp*
+
+# --- HISAT2 index (large) ----------------------------------------------------
+data/processed/hisat2_index/
+
+# --- Intermediate R objects ---------------------------------------------------
+data/processed/*.rds
+
+# --- Logs and temp files ------------------------------------------------------
+logs/
+*.log
+*.tmp
+*.temp
+
+# --- R history and environment ------------------------------------------------
+.Rhistory
+.RData
+.Rproj.user/
+
+# --- OS files -----------------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# --- IDE files ----------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- FastQC output (can be regenerated) --------------------------------------
+*_fastqc.html
+*_fastqc.zip
+
+# --- Python cache -------------------------------------------------------------
+__pycache__/
+*.pyc
